@@ -50,3 +50,12 @@ class B {
     }
 }
 // если функция статическая то можно не создавать объект клааса о вызывать через класс например Car.driveBackward()
+
+
+
+func printSomething (name: String) {
+    print (name)
+}
+func printSomething (surname: String) {     // полиморфизм (функции с одинаковым названием) но разными параметрами
+    print (surname)
+}
