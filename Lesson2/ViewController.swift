@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         array.append("d")  //добавление в массив
         array.insert("zzzz", at: 1) // добавление zzzz на 1  позицию  массива
         printName()                     //используется дефолтный параметр
-        printName(name: "Nik")          //задали параметр
         print (array)
         print (array[1]) //элемент массива с индексом 0
         array.remove(at: 3)  //удаление по индексу 4
@@ -54,8 +53,11 @@ class ViewController: UIViewController {
         var name1 = "string"
         printMyName(&name1)           //вызываеи функцию с изменяемым параметром
     }
-    func printName (name: String = "Vladislav") {
-        print ("мое имя \(name)")
+    func printName () {
+       let name = "Vlad"   //доступна только внутри функции (локальная). Время жизни переменной пок аработает функция
+        func ads () {       // доступна только в  func printName
+            
+        }
     }
 }
 
