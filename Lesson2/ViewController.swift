@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     // Do any additional setup after loading the view.
         printHelloWorld()
-        
+        printName(name: "Vlad", "Sergei")
     }
     
     func printHelloWorld() {
@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         var name1 = "string"
         printMyName(&name1)           //вызываеи функцию с изменяемым параметром
     }
-    
+    func printName (name: String...) {      // в funcможет быть как один так и несколько параметров
+        print ("мое имя \(name)")
+    }
+
+
 }
 
