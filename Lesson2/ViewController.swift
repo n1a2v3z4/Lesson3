@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         
         print (array)
         print (array[1]) //элемент массива с индексом 0
-        
+        array.remove(at: 3)  //удаление по индексу 4
+       print (array.first) //0 элемент массива
+        print (array.last) // последний элемент массива
         
         
     }
