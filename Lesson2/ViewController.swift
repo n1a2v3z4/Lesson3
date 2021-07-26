@@ -6,7 +6,6 @@
 //
 
 import UIKit
-ViewController.printName()  // вызов статической функции с указанием на класс
 
 class ViewController: UIViewController {
     
@@ -21,6 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {  //функция жизненного цикла UIViewController
         super.viewDidLoad()
+        ViewController.printName()  // вызов статической функции с указанием на класс
+
     }
 
    
@@ -32,7 +33,7 @@ class Car {
     
     func driveForvard() {
 }
-    func driveBackward() {
+   static func driveBackward() {
 }
     func run() {
         driveForvard()
@@ -42,7 +43,10 @@ class Car {
 
 class B {
     func createClassA() {
-        let car: Car = Car() //приобретает параметры сlass Car
+        let car: Car = Car() //приобретает параметры сlass Car создали объек класса
         car.driveForvard()    //может использовать параметры class Car
+        Car.driveBackward()  // обращаемся к статической функции
+    
     }
 }
+// если функция статическая то можно не создавать объект клааса о вызывать через класс например Car.driveBackward()
