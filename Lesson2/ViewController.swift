@@ -13,11 +13,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     // Do any additional setup after loading the view.
         printHelloWorld()
+        
     }
     
     func printHelloWorld() {
         let halloWorld = "helloWorld"
         print (halloWorld)
+        
+        func printMyName() {
+            print ("nikolay")
+        }
+        printMyName()
     }
     
 }
