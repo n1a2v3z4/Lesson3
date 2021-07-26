@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let array: [String] = ["123", "qswe"]
+    let arrayOne: [String] = Array()  //пустой массив
+    let arrayOne1: [String] = Array<String>(["asda", "asd"])  //еще один способ
+    let arrrayOne2: [String] = Array(arrayLiteral: "asf", "awe")
+    let array4 = [String] ()  // одна из разновидностей
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     // Do any additional setup after loading the view.
