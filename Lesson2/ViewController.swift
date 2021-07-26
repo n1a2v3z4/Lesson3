@@ -20,10 +20,12 @@ class ViewController: UIViewController {
         let halloWorld = "helloWorld"
         print (halloWorld)
         
-        func printMyName() {
-            print ("nikolay")
+        func printMyName(_ name: inout String) {  //inout показывает что name может меняться
+            name = "zzzzzz"
+            print (name)
         }
-        printMyName()
+        var name1 = "string"
+        printMyName(&name1)           //вызываеи функцию с изменяемым параметром
     }
     
 }
