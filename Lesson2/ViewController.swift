@@ -31,12 +31,15 @@ class ViewController: UIViewController {
        
 // ЗАДАЧА 2
         var number = 3244
-        sumOfTheNumber4(number: &number)
+        sumOfTheNumber4(number: &number)  //?????? почему не работает  sumOfTheNumber4(number: &3244)
         
         
 // ЗАДАЧА 3
-     (exponentNumber(number: 5, degree: 6))
-}
+     exponentNumber(number: 5, degree: 6)
+//ЗАДАЧА 4
+        var z1 = 4
+       factorialNumber(Number: &z1)   //????????почему не работает print ("значение факториала = \(factorialNumber(Number: &z1))")
+    }
 /* 1. Создать 4 универсальных функции сложения, вычитания, умножения и деления(используя перегрузку функций) Т.е будет 4 функции с одинаковыми названиями, но ,например, разными именами параметров. По итогу функция должна выводить в консоль результат операции
      */
     func funcMath (add: Int, ition: Int) {   //сложение
@@ -84,9 +87,21 @@ func exponentNumber (number: Int, degree: Int) {
    print (exponent)
 }
 
+// ЗАДАЧА 4. Создать функцию, которая будет вычислять факториал числа. Т.е функция должна содержать один параметр с типом Int. По итогу она должна выводить результат в консоль.
 
-
-
+func factorialNumber (Number: inout Int) {
+    var result = 1
+    if Number == 0 { result = 1; print (result)}
+    else { if Number < 0 { print ("факториалы только положительные числа")}
+    else {
+        while Number > 0  {
+            result = result * Number
+            Number = Number - 1
+        }
+        print(result)
+    }
+}
+}
 
 
 //class Car {
@@ -181,4 +196,5 @@ func exponentNumber (number: Int, degree: Int) {
 //}
 
 //}
+
 
