@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         funcMath(substr: 15, action: 16)
         funcMath(multi: 11, plication: 13)
         funcMath(divi: 13, sion: 2)
+        var number = 3244
+        sumOfTheNumber4(number: &number)
 // ЗАДАЧА 2
         
     }
@@ -47,19 +49,31 @@ class ViewController: UIViewController {
             print ("деление на 0 запрещено")
         } else {
             
-        print (Float(divi) / Float(sion))
-
+            print (Float(divi) / Float(sion))
+            
+        }
     }
-    }
-
+}
 //ЗАДАЧА 2
     /* 2. Создать функцию, которая будет вычислять сумму цифр четырехзначного числа. Т.е функция должна иметь параметр с типом Int. Также функция должна содержать проверку на то что число действительно четырехзначное. По итогу функция должна выводить в консоль сумму цифр четырехзначного числа
 
 */
-
-
-
+func sumOfTheNumber4 (number: inout Int) {
+    
+    if String(number).count == 4 {
+        var summNumber = 0
+        for i in 1...4 {
+            summNumber += number % 10
+            number = Int(number/10)
+        }
+        print (summNumber)
+    }
+    else
+    {
+        print ("число не четырехзначное")
+    }
 }
+
 //class Car {
 //    var type: String = "Sedan"
 //    var mark: String = "Geely"
@@ -152,3 +166,4 @@ class ViewController: UIViewController {
 //}
 
 //}
+
