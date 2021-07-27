@@ -28,11 +28,15 @@ class ViewController: UIViewController {
         funcMath(substr: 15, action: 16)
         funcMath(multi: 11, plication: 13)
         funcMath(divi: 13, sion: 2)
+       
+// ЗАДАЧА 2
         var number = 3244
         sumOfTheNumber4(number: &number)
-// ЗАДАЧА 2
         
-    }
+        
+// ЗАДАЧА 3
+     (exponentNumber(number: 5, degree: 6))
+}
 /* 1. Создать 4 универсальных функции сложения, вычитания, умножения и деления(используя перегрузку функций) Т.е будет 4 функции с одинаковыми названиями, но ,например, разными именами параметров. По итогу функция должна выводить в консоль результат операции
      */
     func funcMath (add: Int, ition: Int) {   //сложение
@@ -73,6 +77,17 @@ func sumOfTheNumber4 (number: inout Int) {
         print ("число не четырехзначное")
     }
 }
+
+// ЗАДАЧА 3 3.  Создать функцию, которая будет возводить число в степень. Т.е функция должна содержать два параметра: число и степень. По итогу она должна выводить результат в консоль.
+func exponentNumber (number: Int, degree: Int) {
+    let exponent = Int(pow(Double(number), Double(degree)))
+   print (exponent)
+}
+
+
+
+
+
 
 //class Car {
 //    var type: String = "Sedan"
