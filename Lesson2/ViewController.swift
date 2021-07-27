@@ -22,12 +22,44 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        ViewController.printName()  // вызов статической функции с указанием на класс
         
-        Title.parametrIntTipe(8)
+//        Title.parametrIntTipe(8)
+ //ЗАДАЧА 1
+        funcMath(add: 12, ition: 15)
+        funcMath(substr: 15, action: 16)
+        funcMath(multi: 11, plication: 13)
+        funcMath(divi: 13, sion: 2)
+// ЗАДАЧА 2
+        
+    }
+/* 1. Создать 4 универсальных функции сложения, вычитания, умножения и деления(используя перегрузку функций) Т.е будет 4 функции с одинаковыми названиями, но ,например, разными именами параметров. По итогу функция должна выводить в консоль результат операции
+     */
+    func funcMath (add: Int, ition: Int) {   //сложение
+        print (add + ition)
+    }
+    func funcMath (substr: Int, action: Int) {   //вычитание
+        print (substr - action)
+    }
+    func funcMath (multi: Int, plication: Int) {   //умножение
+        print (multi * plication)
+    }
+    func funcMath (divi: Int, sion: Int) {   //деление
+        if sion == 0 {
+            print ("деление на 0 запрещено")
+        } else {
+            
+        print (Float(divi) / Float(sion))
+
+    }
     }
 
-   
-    }
-   
+//ЗАДАЧА 2
+    /* 2. Создать функцию, которая будет вычислять сумму цифр четырехзначного числа. Т.е функция должна иметь параметр с типом Int. Также функция должна содержать проверку на то что число действительно четырехзначное. По итогу функция должна выводить в консоль сумму цифр четырехзначного числа
+
+*/
+
+
+
+}
 //class Car {
 //    var type: String = "Sedan"
 //    var mark: String = "Geely"
@@ -74,18 +106,18 @@ class ViewController: UIViewController {
 //
 //}
     
-    class Title {
-        let Tipe = 21
-    static func parametrIntTipe (_ Tipe: Int) {
-        switch (Tipe) {
-            case 0..<10: print ("ребенок")
-            case 10..<18: print ("подросток")
-            case 18..<30: print ("молодой")
-            case 30..<60: print ("взрослый")
-                default:
-            print ("пожилой")
-                }
-    }
+//    class Title {
+//        let Tipe = 21
+//    static func parametrIntTipe (_ Tipe: Int) {
+//        switch (Tipe) {
+//            case 0..<10: print ("ребенок")
+//            case 10..<18: print ("подросток")
+//            case 18..<30: print ("молодой")
+//            case 30..<60: print ("взрослый")
+//                default:
+//            print ("пожилой")
+//                }
+//    }
 //    }
 //
 //
@@ -119,4 +151,4 @@ class ViewController: UIViewController {
 //    }
 //}
 
-}
+//}
